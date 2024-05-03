@@ -1,0 +1,69 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 255, 255);
+}
+
+/* Styling header */
+h1{
+    text-align: start;
+}
+
+li, a, button{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(122, 172, 215);
+    text-decoration: none;
+    padding: 10px;
+}
+
+header{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+/* .logo{
+    cursor: pointer;
+} */
+
+nav{
+    order: 1;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: blueviolet;
+}
+
+.cta{
+    order: 2;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: beige;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: lightblue;
+}
