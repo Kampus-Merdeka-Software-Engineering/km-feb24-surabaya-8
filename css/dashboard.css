@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grostek', sans-serif;
+}
+
+/* Styling header */
+h1{
+    text-align: start;
+}
+
+a, button{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(122, 172, 215);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+header{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1px;
+    width: 100%;
+}
+
+/* .logo{
+    cursor: pointer;
+} */
+
+nav{
+    order: 1;
+}
+
+.nav__links{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links a:hover{
+    color: blueviolet;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: beige;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: center;
+}
+button:hover{
+    background-color: lightblue;
+}
+
+/*dashboard*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    background: fixed rgb(122, 172, 215);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto; 
+    grid-template-columns: auto 100px auto; 
+    grid-template-areas: 
+      "header header content"
+      "sidebar sidebar content"
+      "sidebar1 sidebar1 content";
+    
+    
+}
+
+.header{
+    grid-area: header;
+    background-color: hsl(0, 99%, 99%);
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: hsl(0, 99%, 99%);
+    margin:5px;
+    padding:5px;
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
+    background-color: hsl(0, 99%, 99%);
+    margin:5px;
+    padding:5px;
+}
+
+.content{
+    grid-area: content;
+    background-color: hsl(0, 99%, 99%);
+}
+
+.header figure {
+    display: inline-block; /* Menjadikan figure berdampingan */
+    margin-right: 20px; /* Memberi jarak antara setiap figure */
+  }
+
+.header figcaption {
+    display: inline-block; /* Menjadikan caption berdampingan */
+    vertical-align: top; /* Menjadikan caption sejajar dengan bagian atas gambar */
+    margin-left: 10px; /* Memberi jarak antara gambar dan caption */
+  }
+
+.dashimg {
+    width: 70px;
+    height: 100px;
+}
+
+.big-number {
+    font-size: 30px;
+    text-align: center;
+
+}

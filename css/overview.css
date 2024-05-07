@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grostek', sans-serif;
+}
+
+/* Styling header */
+h1{
+    text-align: start;
+}
+
+a, button{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(122, 172, 215);
+    text-decoration: none;
+    padding: 10px;
+}
+
+header{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1px;
+}
+
+/* .logo{
+    cursor: pointer;
+} */
+
+nav{
+    order: 1;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: blueviolet;
+}
+
+.cta{
+    order: 2;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: beige;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: lightblue;
+}
+
+/* Styling Main Content */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    background: fixed rgb(122, 172, 215);
+}
+.headingpage{
+    padding: 35px;
+}
+
+.heading{
+    text-align: left;
+}
+img{
+    width: 350px;
+    height: 250px;
+    
+}
+aside{
+    float: left;
+    padding: 15px;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.bq-container{
+    display: flex;
+    grid-template-columns: repeat(2, minmax(270px,1fr));
+    
+    gap: 15px;
+    background: -o-linear-gradient(blueviolet, green);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.sp-container{
+    display: flex;
+    grid-template-columns: repeat(3, minmax(270px,1fr));
+    gap: 15px;
+    background: -o-linear-gradient(blueviolet, green);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.a-container{
+    display: grid;
+    grid-template-columns: 2, minmax(270px,1fr);
+    gap: 15px;
+    background: -o-linear-gradient(blueviolet, green);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
