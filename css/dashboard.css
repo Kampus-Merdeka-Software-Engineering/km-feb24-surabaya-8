@@ -73,7 +73,7 @@ body{
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background: fixed #b2e01e;
+    background: fixed #b2e013;
 }
 
 .grid-container {
@@ -81,46 +81,59 @@ body{
     grid-template-rows: auto auto auto; 
     grid-template-columns: auto 100px auto; 
     grid-template-areas: 
-      "header header content"
+      "header1 header1 content"
       "sidebar sidebar content"
       "sidebar1 sidebar1 content";
     
     
 }
 
-.header{
-    grid-area: header;
+@media (min-width: 768px) {
+    .header1{
+    grid-area: header1;
     background-color: hsl(0, 99%, 99%);
     margin: 5px;
     padding: 5px;
+    height: 120px;
+}
 }
 
+@media (min-width: 768px) {
+    .content{
+    grid-area: content;
+    background-color: hsl(0, 99%, 99%);
+    margin: 5px;
+    padding: 5px;
+    height: 100%;
+}
+}
 
-.sidebar {
+@media (min-width: 768px){
+    .sidebar {
     grid-area: sidebar;
     background-color: hsl(0, 99%, 99%);
     margin:5px;
     padding:5px;
+    height: 90%;
+}
 }
 
-.sidebar1 {
+@media (min-width: 768px) {
+    .sidebar1 {
     grid-area: sidebar1;
     background-color: hsl(0, 99%, 99%);
     margin:5px;
     padding:5px;
+    height: 100%;
+}
 }
 
-.content{
-    grid-area: content;
-    background-color: hsl(0, 99%, 99%);
-}
-
-.header figure {
+.header1 figure {
     display: inline-block; /* Menjadikan figure berdampingan */
     margin-right: 20px; /* Memberi jarak antara setiap figure */
   }
 
-.header figcaption {
+.header1 figcaption {
     display: inline-block; /* Menjadikan caption berdampingan */
     vertical-align: top; /* Menjadikan caption sejajar dengan bagian atas gambar */
     margin-left: 10px; /* Memberi jarak antara gambar dan caption */
@@ -137,9 +150,13 @@ body{
 
 }
 
-/* Footer styling */
 footer {
+    position: fixed; /* Tetapkan posisi footer */
+    bottom: 0; /* Tempatkan di bagian bawah */
+    left: 0; /* Jaga agar tetap di sisi kiri */
+    width: 100%; /* Lebar footer menyesuaikan lebar layar */
     background-color: #3559e0;
     color: #fff;
     padding: 20px;
+    text-align: center;
 }
