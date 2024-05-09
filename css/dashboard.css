@@ -21,7 +21,7 @@ a, button{
 }
 
 header{
-    background-color: antiquewhite;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@ body{
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background: fixed rgb(122, 172, 215);
+    background: fixed #b2e01e;
 }
 
 .grid-container {
@@ -135,4 +135,11 @@ body{
     font-size: 30px;
     text-align: center;
 
+}
+
+/* Footer styling */
+footer {
+    background-color: #3559e0;
+    color: #fff;
+    padding: 20px;
 }

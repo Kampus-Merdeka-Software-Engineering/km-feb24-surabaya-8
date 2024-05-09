@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grostek', sans-serif;
+}
+
+/* Styling header */
+h1 {
+    text-align: start;
+}
+
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(122, 172, 215);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1px;
+    width: 100%;
+}
+
+nav {
+    order: 1;
+}
+
+.nav__links {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links a:hover {
+    color: blueviolet;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: beige;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: center;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    background: fixed #b2e01b;
+}
+
+/* Form styling */
+form {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Tambahkan warna latar belakang putih di sini */
+}
+
+form h2 {
+    text-align: center;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Notification styling */
+#notification {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Footer styling */
+footer {
+    background-color: #3559e0;
+    color: #fff;
+    padding: 20px;
+}
