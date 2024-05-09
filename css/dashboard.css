@@ -6,61 +6,42 @@
 }
 
 /* Styling header */
-h1{
+h1 {
     text-align: start;
+    color: #ffff;
 }
 
 a, button{
-    font-family:"Montserrat", sans-serif;
     font-weight: 500;
     font-size: 17px;
-    color: rgb(122, 172, 215);
+    color: #ffff;
     text-decoration: none;
     padding: 10px;
-    text-align: center;
 }
 
 header{
-    background-color: #ffffff;
+    background: fixed #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
     padding: 10px 1px;
-    width: 100%;
 }
 
-/* .logo{
+.logo{
     cursor: pointer;
-} */
-
-nav{
-    order: 1;
-}
-
-.nav__links{
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav__links a{
-    transition: all 0.3s ease 0s;
-}
-
-.nav__links a:hover{
-    color: blueviolet;
+    size: small;
 }
 
 button{
     padding: 9px 25px;
-    background-color: beige;
-    border: none;
+    background: fixed rgb(52, 130, 227);
+    border: 0px;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
-    position: center;
 }
 button:hover{
-    background-color: lightblue;
+    background: fixed rgb(88, 162, 227);
 }
 
 /*dashboard*/
@@ -73,7 +54,7 @@ body{
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background: fixed #b2e013;
+    background: radial-gradient(#ffff, #b2e01e);
 }
 
 .grid-container {
