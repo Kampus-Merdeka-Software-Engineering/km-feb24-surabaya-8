@@ -14,13 +14,13 @@ a, button{
     font-family:"Montserrat", sans-serif;
     font-weight: 500;
     font-size: 17px;
-    color: rgb(122, 172, 215);
+    color: black;
     text-decoration: none;
     padding: 10px;
 }
 
 header{
-    background-color: antiquewhite;
+    background-color: #ffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,10 +78,24 @@ body{
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background: fixed rgb(122, 172, 215);
+    background: fixed #b2e01e;
 }
 .headingpage{
     padding: 35px;
+}
+
+.box{
+    background: fixed #3559e0;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 17px;
+    /* border-radius: 15px; */
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-width: 3px;
+    border-color: black;
+    /* text-align: center; */
+
 }
 
 .heading{
@@ -104,9 +118,8 @@ h1, h2, h3{
 .bq-container{
     display: flex;
     grid-template-columns: repeat(2, minmax(270px,1fr));
-    
     gap: 15px;
-    background: -o-linear-gradient(blueviolet, green);
+    background: #ffff;
     padding: 15px 9%;
     padding-bottom: 100px;
 }
@@ -115,7 +128,7 @@ h1, h2, h3{
     display: flex;
     grid-template-columns: repeat(3, minmax(270px,1fr));
     gap: 15px;
-    background: -o-linear-gradient(blueviolet, green);
+    background: #ffff;
     padding: 15px 9%;
     padding-bottom: 100px;
 }
@@ -124,7 +137,13 @@ h1, h2, h3{
     display: grid;
     grid-template-columns: 2, minmax(270px,1fr);
     gap: 15px;
-    background: -o-linear-gradient(blueviolet, green);
+    background: #ffff;
     padding: 15px 9%;
     padding-bottom: 100px;
+}
+
+footer{
+    background-color: #3559e0;
+    color: black;
+    padding: 20px;
 }
