@@ -1,51 +1,53 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Space Grostek', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Styling header */
+/* Header */
 h1 {
+    padding: 10px;
     text-align: start;
-    color: #ffff;
+    color: #fff;
 }
 
-a, button{
+a, button {
     font-weight: 500;
     font-size: 17px;
-    color: #ffff;
+    color: #fff;
     text-decoration: none;
     padding: 10px;
 }
 
-header{
-    background: fixed #3559e0;
+header {
+    background-color: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 1px;
+    padding: 10px 20px;
 }
 
-.logo{
+.logo {
     cursor: pointer;
     size: small;
 }
 
-button{
+button {
     padding: 9px 25px;
-    background: fixed rgb(52, 130, 227);
+    background-color: rgb(52, 130, 227);
     border: 0px;
     border-radius: 50px;
     cursor: pointer;
 }
-button:hover{
-    background: fixed rgb(88, 162, 227);
+
+button:hover {
+    background-color: rgb(88, 162, 227);
 }
 
 /* Main Content */
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -53,6 +55,14 @@ body{
     border: none;
     text-decoration: none;
     background: radial-gradient(#ffff, #b2e01e);
+}
+
+h2{
+    padding-top: 25px;
+    margin: 10px;
+    font-size: 45px;
+    text-align: center;
+
 }
 
 .team {
@@ -63,12 +73,13 @@ body{
     flex-direction: column;
 }
 
-.team-content{
-    width: 750px;
-    height: fit-content;
-    margin: 25px;
+.team-content {
+    width: 100%;
+    max-width: 1200px; /* Max width for better responsiveness */
+    margin: 0 auto; /* Center align */
+    padding: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mengatur jumlah kotak per baris */
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px;
     text-align: center;
     margin-top: 25px;
@@ -76,13 +87,10 @@ body{
 }
 
 .team-content img {
-    align-content: center;
-    justify-content: center;
     width: 150px;
-    height: 140px;
-    margin: 15px;
-    border-radius: 75%;
+    height: 150px;
     margin-bottom: 15px;
+    border-radius: 50%;
 }
 
 .center h1 {
@@ -91,18 +99,17 @@ body{
     text-align: center;
 }
 
-h2 {
-    margin-top: 35px;
-    margin-bottom: 25px;
-    font-size: 45px;
+.box {
+    padding: 20px;
+    background: radial-gradient(#c3c2bd, #fff);
+    border-radius: 15px;
+    margin: 10px;
+    transition: transform 0.3s ease;
 }
 
-.box {
-    padding: 16px;
-    background: radial-gradient(#c3c2bd, #ffff);
-    border-radius: 15px;
-    flex: 1; /* Menyesuaikan ukuran kotak secara otomatis */
-    margin: 10px; /* Jarak antar kotak */
+.box:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .box h4 {
@@ -112,9 +119,13 @@ h2 {
     margin-bottom: 8px;
 }
 
+h5{
+    font-size: 19px;
+}
+
 .icons i {
     display: inline-block;
-    color: #ffff;
+    color: #fff;
     font-size: 20px;
     margin: 0 8px;
     transition: all 0.38s ease;
@@ -124,33 +135,10 @@ h2 {
     transform: scale(1.2);
 }
 
-.box:hover {
-    transform: translateY(-10px);
-    cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .team-content {
-        grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 kotak per baris pada layar yang lebih besar */
-    }
-}
-
-@media (max-width: 1240px) {
-    .team {
-        width: 100%;
-        height: auto;
-        padding: 90px 2%;
-    }
-
-    .center {
-        font-size: 3.2rem;
-    }
-}
-
 /* Footer */
-footer{
-    background-color:#3559e0;
-    color: #ffff;
+footer {
+    background-color: #3559e0;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }

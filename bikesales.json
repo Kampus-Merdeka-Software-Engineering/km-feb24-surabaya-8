@@ -1,0 +1,102 @@
+[
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Tires and Tubes",
+   "Order_Quantity": 261076
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Tires and Tubes",
+   "Order_Quantity": 244813
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Bottles and Cages",
+   "Order_Quantity": 121984
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Bottles and Cages",
+   "Order_Quantity": 116626
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Helmets",
+   "Order_Quantity": 96389
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Helmets",
+   "Order_Quantity": 85133
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Jerseys",
+   "Order_Quantity": 47005
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Jerseys",
+   "Order_Quantity": 41090
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Fenders",
+   "Order_Quantity": 34118
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Caps",
+   "Order_Quantity": 33643
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Caps",
+   "Order_Quantity": 33625
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Fenders",
+   "Order_Quantity": 28020
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Gloves",
+   "Order_Quantity": 22103
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Gloves",
+   "Order_Quantity": 17875
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Shorts",
+   "Order_Quantity": 14340
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Cleaners",
+   "Order_Quantity": 13951
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Cleaners",
+   "Order_Quantity": 13623
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Shorts",
+   "Order_Quantity": 12828
+ },
+ {
+   "Customer_Gender": "M",
+   "Sub_Category": "Hydration Packs",
+   "Order_Quantity": 9996
+ },
+ {
+   "Customer_Gender": "F",
+   "Sub_Category": "Hydration Packs",
+   "Order_Quantity": 9918
+ }
+]

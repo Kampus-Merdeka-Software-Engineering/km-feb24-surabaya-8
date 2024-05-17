@@ -1,129 +1,96 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Space Grotesk', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Space Grostek', sans-serif;
 }
 
-/* Styling header */
-h1 {
-    text-align: start;
-    color: #ffff;
-}
-
-a, button{
-    font-weight: 500;
-    font-size: 17px;
-    color: #ffff;
-    text-decoration: none;
-    padding: 10px;
-}
-
-header{
-    background: fixed #3559e0;
+header {
+    background: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-    padding: 10px 1px;
+    padding: 10px;
 }
 
-.logo{
-    cursor: pointer;
-    size: small;
+header h1, header a, header button {
+    color: #fff;
 }
 
-button{
+button {
     padding: 9px 25px;
-    background: fixed rgb(52, 130, 227);
-    border: 0px;
+    background: rgb(52, 130, 227);
+    border: none;
     border-radius: 50px;
     cursor: pointer;
 }
-button:hover{
-    background: fixed rgb(88, 162, 227);
+
+button:hover {
+    background: rgb(88, 162, 227);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-    background: radial-gradient(#ffff, #b2e01e);
+.form-container {
+    display: none; /* Hide the form container by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other content */
 }
 
-/* Form styling */
-form {
-    margin: 20px auto;
-    max-width: 600px;
+.form-content {
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff; /* Tambahkan warna latar belakang putih di sini */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 80%;
+    position: relative;
 }
 
-form h2 {
-    text-align: center;
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 form label {
-    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 form input[type="text"],
+form input[type="email"],
 form textarea {
-    width: 100%;
+    width: calc(100% - 22px);
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
-form textarea {
-    resize: vertical;
-}
-
-form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-form input[type="submit"]:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #555;
 }
 
-/* Notification styling */
 #notification {
     text-align: center;
-    margin-top: 20px;
-}
-
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-/* Footer styling */
-footer {
-    background-color: #3559e0;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    margin-top: 10px;
+    color: #333;
 }

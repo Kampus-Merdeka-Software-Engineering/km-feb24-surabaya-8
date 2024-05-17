@@ -2,11 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Space Grostek', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
+
 
 /* Styling header */
 h1 {
+    padding: 10px;
     text-align: start;
     color: #ffff;
 }
