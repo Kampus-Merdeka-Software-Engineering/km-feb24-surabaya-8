@@ -59,68 +59,75 @@ body{
     background: radial-gradient(#ffff, #b2e01e);
 }
 
-.grid-container {
+.container {
     display: grid;
-    grid-template-rows: auto auto auto; 
-    grid-template-columns: auto 100px auto; 
-    grid-template-areas: 
-      "header1 header1 content"
-      "sidebar sidebar content"
-      "sidebar1 sidebar1 content";
-    
-    
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "mainbar  mainbar  sidebar "
+        "content1  content2  sidebar"
+        "content3 content4 sidebar";
 }
 
-@media (min-width: 768px) {
-    .header1{
-    grid-area: header1;
-    background-color: hsl(0, 99%, 99%);
+#mainbar {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: mainbar;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin: 5px;
-    padding: 5px;
-    height: 120px;
-}
 }
 
-@media (min-width: 768px) {
-    .content{
-    grid-area: content;
-    background-color: hsl(0, 99%, 99%);
-    margin: 5px;
-    padding: 5px;
-    height: 100%;
-}
-}
-
-@media (min-width: 768px){
-    .sidebar {
+#sidebar {
+    background-color: hsl(0, 0%, 99%);
     grid-area: sidebar;
-    background-color: hsl(0, 99%, 99%);
-    margin:5px;
-    padding:5px;
-    height: 90%;
-}
+    margin: 5px;
 }
 
-@media (min-width: 768px) {
-    .sidebar1 {
-    grid-area: sidebar1;
-    background-color: hsl(0, 99%, 99%);
-    margin:5px;
-    padding:5px;
-    height: 100%;
-}
+#content1 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content1;
+    margin: 5px;
 }
 
-.header1 figure {
-    display: inline-block; /* Menjadikan figure berdampingan */
-    margin-right: 20px; /* Memberi jarak antara setiap figure */
-  }
+#content2 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content2;
+    margin: 5px;
+}
 
-.header1 figcaption {
-    display: inline-block; /* Menjadikan caption berdampingan */
-    vertical-align: top; /* Menjadikan caption sejajar dengan bagian atas gambar */
-    margin-left: 10px; /* Memberi jarak antara gambar dan caption */
-  }
+#content3 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content3;
+    margin: 5px;
+}
+
+#content4 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content4;
+    margin: 5px;
+}
+
+#mainbar figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0 10px;
+}
+
+#mainbar figcaption {
+    display: inline-block;
+    justify-content: space-around;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.chart-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
 
 .dashimg {
     width: 70px;
