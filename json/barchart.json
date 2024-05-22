@@ -1,0 +1,18 @@
+[
+ {
+   "Age_Group": "Youth (<25)",
+   "Order_Quantity": "12.113420158550396"
+ },
+ {
+   "Age_Group": "Young Adults (25-34)",
+   "Order_Quantity": "11.566281103945272"
+ },
+ {
+   "Age_Group": "Seniors (64+)",
+   "Order_Quantity": "13.500695410292073"
+ },
+ {
+   "Age_Group": "Adults (35-64)",
+   "Order_Quantity": "12.050615990462083"
+ }
+]
