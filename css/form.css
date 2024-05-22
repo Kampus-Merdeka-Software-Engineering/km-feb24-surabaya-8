@@ -52,7 +52,7 @@ body {
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background: radial-gradient(#ffff, #b2e01e);
+    background: radial-gradient(#ffff, #b3e01f);
     display: flex;
     flex-direction: column;
     align-items: center;

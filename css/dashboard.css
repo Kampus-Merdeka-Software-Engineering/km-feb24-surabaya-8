@@ -21,14 +21,15 @@ a, button{
     padding: 10px;
 }
 
-header{
-    background: fixed #3559e0;
+header {
+    background: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 1px;
+    padding: 10px 20px;
 }
+
 
 .logo{
     cursor: pointer;
@@ -123,12 +124,11 @@ body{
     margin-left: 10px;
 }
 
-.chart-container {
-    width: 300px;
-    height: 300px;
+.chart-container1 {
+    width: 550px;
+    height: 500px;
     margin: 0 auto;
 }
-
 .dashimg {
     width: 70px;
     height: 100px;
