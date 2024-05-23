@@ -61,50 +61,6 @@
             <!-- JSON data will be displayed here -->
         </div>
     </div>
-    <script>
-        (async function() {
-            //ByQuantityChart
-            const byQuantityChart = [
-                    { "Product": "Water Bottle - 30 oz.", "count": 162051 },
-                    { "Product": "Patch Kit/8 Patches", "count": 155310 },
-                    { "Product": "Mountain Tire Tube", "count": 100915 },
-                    { "Product": "AWC Logo Cap", "count": 67316 },
-                    { "Product": "Sport-100 Helmet, Red", "count": 63652 }
-                ];
-
-            const ctx = document.getElementById('byQuantityChart').getContext('2d');
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: byQuantityChart.map(item => item.Product),
-                    datasets: [{
-                        label: 'By Quantity',
-                        data: byQuantityChart.map(item => item.count),
-                        backgroundColor: ['rgb(179, 224, 31)'],
-                        borderColor: ['rgb(179, 224, 31)'],
-                        borderWidth: 1,
-                        barThickness: 24,
-                        categoryPercentage: 0.5,
-                        barPercentage: 0.5
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    scales: {
-                        x: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-            //
-        })();
-
-
-
-        
-    </script>
-
     <script src="js/script.js"></script>
 </body>
 <!--footer-->
