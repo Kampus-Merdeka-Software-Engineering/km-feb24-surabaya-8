@@ -51,6 +51,9 @@ button:hover{
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -61,14 +64,32 @@ body{
 }
 
 .container {
+    flex: 1;
     display: grid;
     height: 100vh;
+    gap: 5px;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto repeat(7, 1fr);
     grid-template-areas:
-        "mainbar  mainbar  sidebar "
-        "content1  content2  sidebar"
-        "content3 content4 sidebar";
+        "dashboard dashboard dashboard"
+        "mainbar  mainbar mainbar "
+        "content1 content1 content1 "
+        "content2 content2 content2"
+        "content3 content3 content3 "
+        "content4 content4 content4"
+        "content5 content5 content5"
+        "content6 content6 content6"
+        "content7 content7 content7"
+        ;
+}
+
+#dashboard {
+    background-color: #3559e0;
+    grid-area: dashboard;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 5px;
 }
 
 #mainbar {
@@ -77,12 +98,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
-}
-
-#sidebar {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: sidebar;
     margin: 5px;
 }
 
@@ -110,25 +125,57 @@ body{
     margin: 5px;
 }
 
+#content5 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content5;
+    margin: 5px;
+}
+
+#content6 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content6;
+    margin: 5px;
+}
+
+#content7 {
+    background-color: hsl(0, 0%, 99%);
+    grid-area: content7;
+    margin: 5px;
+}
+
 #mainbar figure {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 0 10px;
+    margin-right: 0;
 }
 
 #mainbar figcaption {
     display: inline-block;
-    justify-content: space-around;
-    vertical-align: top;
     margin-left: 10px;
+    font-size: 20px;
 }
 
-.chart-container1 {
-    width: 550px;
-    height: 500px;
+#dashboard figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+}
+
+#dashboard figcaption {
+    display: inline-block;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.chart-container {
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
 }
+
 .dashimg {
     width: 70px;
     height: 100px;
@@ -141,7 +188,6 @@ body{
 }
 
 footer {
-    position: fixed; /* Tetapkan posisi footer */
     bottom: 0; /* Tempatkan di bagian bawah */
     left: 0; /* Jaga agar tetap di sisi kiri */
     width: 100%; /* Lebar footer menyesuaikan lebar layar */
