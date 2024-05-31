@@ -2,50 +2,54 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Space Grotesk', sans-serif; /* Corrected font name */
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Styling header */
 h1 {
     padding: 10px;
     text-align: start;
-    color: #fff;
+    color: #ffff;
 }
+
 a, button {
     font-weight: 500;
     font-size: 17px;
-    color: #fff;
+    color: #ffff;
     text-decoration: none;
     padding: 10px;
 }
 
 header {
-    background-color: #3559e0; /* Fixed color property */
+    background: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 20px; /* Adjusted padding for better spacing */
+    padding: 10px 20px;
+}
+
+.logo {
+    cursor: pointer;
+    size: small;
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgb(52, 130, 227); /* Fixed color property */
-    border: none;
+    background: rgb(52, 130, 227);
+    border: 0px;
     border-radius: 50px;
     cursor: pointer;
-    position: relative;
 }
 
 button:hover {
-    background-color: rgb(88, 162, 227); /* Fixed color property */
+    background: rgb(88, 162, 227);
 }
-
 /* Main Content */
 img {
     width: 100%;
     height: 500px;
-    object-fit: cover; /* Ensure image covers the area without distortion */
+    object-fit: cover;
 }
 
 .heading {
@@ -115,7 +119,68 @@ main {
     font-size: 17px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    border: 3px solid black; /* Unified border properties */
+    border: 3px solid black;
+}
+
+.chartMenu {
+    width: 100%;
+    height: 50px;
+    background: #1A1A1A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.chartCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: radial-gradient(#fff, #b2e01e);
+    min-height: calc(100vh - 50px);
+}
+
+.chartBox {
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.chartBoxHalf {
+    flex: 1 1 48%; /* Adjusting this to allow two boxes to fit on the same line */
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.chartBox canvas, .chartBoxHalf canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+select {
+    width: auto;
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 /* Footer */
@@ -124,4 +189,61 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .gview .gview-container {
+        grid-template-columns: repeat(1, minmax(270px, 1fr));
+    }
+
+    .grafik {
+        width: 100%;
+        height: auto;
+    }
+
+    .desc {
+        margin: 20px;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .gview-container .heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .cta button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .desc {
+        margin: 10px;
+        padding: 5px;
+        font-size: 14px;
+    }
 }

@@ -9,41 +9,41 @@
 h1 {
     padding: 10px;
     text-align: start;
-    color: #fff;
+    color: #ffff;
 }
 
 a, button {
     font-weight: 500;
     font-size: 17px;
-    color: #fff;
+    color: #ffff;
     text-decoration: none;
     padding: 10px;
 }
 
 header {
-    background-color: #3559e0; /* Fixed color property */
+    background: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 20px; /* Adjusted padding for better spacing */
+    padding: 10px 20px;
 }
 
 .logo {
-    width: 50px;
-    height: 30px;
+    cursor: pointer;
+    size: small;
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgb(52, 130, 227); /* Fixed color property */
-    border: none;
+    background: rgb(52, 130, 227);
+    border: 0px;
     border-radius: 50px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: rgb(88, 162, 227); /* Fixed color property */
+    background: rgb(88, 162, 227);
 }
 
 /* Styling Main Content */
@@ -144,4 +144,77 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+/* Responsiveness for body on mobile devices */
+@media (max-width: 768px) {
+    main {
+        margin: 50px; /* Reduce margin */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .bike {
+        height: auto; /* Allow image to resize based on width */
+        max-width: 100%; /* Ensure image does not overflow */
+    }
+
+    .headingpage {
+        padding: 20px; /* Reduce padding */
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .box {
+        padding: 10px; /* Reduce padding */
+        margin-top: 15px; /* Reduce margin */
+        font-size: 15px; /* Reduce font size */
+    }
+
+    aside {
+        float: none; /* Remove float */
+        margin: 10px auto; /* Center align */
+    }
+
+    img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduce font size */
+        padding: 10px 0; /* Reduce padding */
+    }
+
+    .headingpage {
+        font-size: 25px; /* Reduce font size */
+    }
+
+    .bq-container, .sp-container, .a-container {
+        grid-template-columns: repeat(1, minmax(270px, 1fr)); /* Change to single column layout */
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .cta button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }

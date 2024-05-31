@@ -5,7 +5,6 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
-
 /* Styling header */
 h1 {
     padding: 10px;
@@ -13,7 +12,7 @@ h1 {
     color: #ffff;
 }
 
-a, button{
+a, button {
     font-weight: 500;
     font-size: 17px;
     color: #ffff;
@@ -30,169 +29,141 @@ header {
     padding: 10px 20px;
 }
 
-
-.logo{
+.logo {
     cursor: pointer;
     size: small;
 }
 
-button{
+button {
     padding: 9px 25px;
-    background: fixed rgb(52, 130, 227);
+    background: rgb(52, 130, 227);
     border: 0px;
     border-radius: 50px;
     cursor: pointer;
 }
-button:hover{
-    background: fixed rgb(88, 162, 227);
+
+button:hover {
+    background: rgb(88, 162, 227);
 }
 
-/*dashboard*/
-body{
-    margin: 0;
-    padding: 0;
+/* Styling Chart */
+.chartMenu {
+    width: 100%;
+    height: 50px;
+    background: #1A1A1A;
+    color: white;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-    background: radial-gradient(#ffff, #b2e01e);
-}
-
-.container {
-    flex: 1;
-    display: grid;
-    height: 100vh;
-    gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: auto auto repeat(7, 1fr);
-    grid-template-areas:
-        "dashboard dashboard dashboard"
-        "mainbar  mainbar mainbar "
-        "content1 content1 content1 "
-        "content2 content2 content2"
-        "content3 content3 content3 "
-        "content4 content4 content4"
-        "content5 content5 content5"
-        "content6 content6 content6"
-        "content7 content7 content7"
-        ;
-}
-
-#dashboard {
-    background-color: #3559e0;
-    grid-area: dashboard;
-    display: flex;
-    justify-content:flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 5px;
-}
-
-#mainbar {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: mainbar;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-}
-
-#content1 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content1;
-    margin: 5px;
-}
-
-#content2 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content2;
-    margin: 5px;
-}
-
-#content3 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content3;
-    margin: 5px;
-}
-
-#content4 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content4;
-    margin: 5px;
-}
-
-#content5 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content5;
-    margin: 5px;
-}
-
-#content6 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content6;
-    margin: 5px;
-}
-
-#content7 {
-    background-color: hsl(0, 0%, 99%);
-    grid-area: content7;
-    margin: 5px;
-}
-
-#mainbar figure {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 0;
-}
-
-#mainbar figcaption {
-    display: inline-block;
-    margin-left: 10px;
     font-size: 20px;
 }
 
-#dashboard figure {
+.chartCard {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: radial-gradient(#fff, #b2e01e);
+    min-height: calc(100vh - 50px);
+}
+
+.chartBox {
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-right: 0;
+    height: 300px;
 }
 
-#dashboard figcaption {
-    display: inline-block;
-    margin-left: 10px;
-    color: #fff;
-    font-size: 20px;
+.chartBoxHalf {
+    flex: 1 1 48%; /* Adjusting this to allow two boxes to fit on the same line */
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
 }
 
-.chart-container {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+.chartBox canvas, .chartBoxHalf canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.dashimg {
-    width: 70px;
-    height: 100px;
+select {
+    width: auto;
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.big-number {
-    font-size: 30px;
-    text-align: center;
-
-}
-
+/* Footer */
 footer {
-    bottom: 0; /* Tempatkan di bagian bawah */
-    left: 0; /* Jaga agar tetap di sisi kiri */
-    width: 100%; /* Lebar footer menyesuaikan lebar layar */
     background-color: #3559e0;
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .chartBox, .chartBoxHalf {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .chartMenu {
+        flex-direction: column;
+        height: auto;
+        font-size: 16px;
+    }
+
+    select {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .cta button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .chartMenu p {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }

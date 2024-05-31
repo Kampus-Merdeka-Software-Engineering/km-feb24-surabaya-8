@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!--header-->
     <header> 
         <h1>Euro CycleHub</h1>
         <nav class="navbar">
@@ -23,58 +22,51 @@
            <a class="cta" href="form.html"><button>Contact Us</button></a>
         </nav>
     </header>
-
-    <!--Main Content-->
-    <div class="container">
-        <div id="dashboard">
-            <figure>
-                <img src="img/logoputih.png" class="dashimg">
-                <figcaption>Bike Sales Dashboard</figcaption>
-            </figure>
+    <div class="chartMenu">
+        <p>Dashboard</p>
+        <select id="yearSelect" onchange="filterChart(this.value)">
+            <option value="">Select Year</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+        </select>
+        <!-- Dropdown baru untuk pemilihan negara -->
+        <!-- <select id="countrySelect" onchange="filterChartByCountry(this.value)">
+            <option value="">Select Country</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option> -->
+            <!-- Lanjutkan dengan negara lain yang relevan -->
+        </select>
+    </div>
+    <div class="chartCard">
+        <div class="chartBox">
+            <canvas id="myChart"></canvas>
         </div>
-        <div id="mainbar">
-            <figure>
-                <img src="img/keranjang.png" class="dashimg">
-                <figcaption>Total Unit Sold<br><span class="big-number">1,3 jt</span></figcaption>
-            </figure>  
-            <figure>
-                <img src="img/sepeda1.png" class="dashimg">
-                <figcaption>Product<br><span class="big-number">130</span></figcaption>
-            </figure>
-            <figure>
-                <img src="img/orang.png" class="dashimg">
-                <figcaption>Total Customers<br><span class="big-number">112.036</span></figcaption>
-            </figure>
+        <div class="chartBox">
+            <canvas id="myChart2"></canvas>
         </div>
-        <div id="content1"> 
-            <div class="chart-container"><canvas id="byQuantityChart"></canvas></div>
+        <div class="chartBox">
+            <canvas id="myChart3"></canvas>
         </div>
-        <div id="content2">
-            <div class="chart-container"><canvas id="byYearChart"></canvas></div>
+        <div class="chartBoxHalf">
+            <canvas id="myChart4"></canvas>
         </div>
-        <div id="content3">
-            <div class="chart-container"><canvas id="DoughnutGender"></canvas></div>
-        </div>
-        <div id="content4">
-            <div class="chart-container"><canvas id="BarGender"></canvas></div>
-        </div>
-        <div id="content5">
-            <div class="chart-container"><canvas id="AverageOrder"></canvas></div>
-        </div>
-        <div id="content6">
-            <div class="chart-container"><canvas id="YoYOrderGrowth"></canvas></div>
-        </div>
-        <div id="content7">
-            <div class="chart-container"><canvas id="TotalUnitSold"></canvas></div>
-        </div>
-        <div id="output">
-            <!-- JSON data will be displayed here -->
+        <div class="chartBoxHalf">
+            <canvas id="myChart5"></canvas>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 <!--footer-->
 <footer>
     <p>Copyright &copy; 2024 Surabaya Team 8</p>
-</footer>
+  </footer>
 </html>
