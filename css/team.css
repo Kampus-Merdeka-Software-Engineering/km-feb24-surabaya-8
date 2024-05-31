@@ -57,12 +57,11 @@ body {
     background: radial-gradient(#ffff, #b2e01e);
 }
 
-h2{
+h2 {
     padding-top: 25px;
     margin: 10px;
     font-size: 45px;
     text-align: center;
-
 }
 
 .team {
@@ -77,13 +76,11 @@ h2{
     width: 100%;
     max-width: 1200px; /* Max width for better responsiveness */
     margin: 0 auto; /* Center align */
-    padding: 100px;
+    padding: 50px; /* Reduced padding */
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
 }
 
 .team-content img {
@@ -119,7 +116,7 @@ h2{
     margin-bottom: 8px;
 }
 
-h5{
+h5 {
     font-size: 19px;
 }
 
@@ -146,18 +143,18 @@ footer {
 /* Responsiveness for body on mobile devices */
 @media (max-width: 768px) {
     .team-content {
-        grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Adjust the number of columns */
-        padding: 50px; /* Reduce padding for better spacing */
+        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Adjust the number of columns */
+        padding: 30px; /* Reduce padding for better spacing */
     }
 
     .team-content img {
-        width: 100px; /* Reduce image size */
-        height: 100px;
+        width: 120px; /* Reduce image size */
+        height: 120px;
         margin-bottom: 10px; /* Reduce margin */
     }
 
-    .center h1 {
-        font-size: 24px; /* Reduce font size */
+    h2 {
+        font-size: 35px; /* Reduce font size */
     }
 
     .box {
@@ -166,14 +163,13 @@ footer {
     }
 
     .box h4 {
-        font-size: 18px; /* Reduce font size */
+        font-size: 20px; /* Reduce font size */
     }
 
     h5 {
         font-size: 16px; /* Reduce font size */
     }
 }
-
 
 @media (max-width: 480px) {
     header {
@@ -197,5 +193,33 @@ footer {
     .cta button {
         width: 100%;
         margin-top: 10px;
+    }
+
+    .team-content {
+        grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Adjust the number of columns */
+        padding: 20px; /* Reduce padding for better spacing */
+    }
+
+    .team-content img {
+        width: 100px; /* Reduce image size */
+        height: 100px;
+        margin-bottom: 10px; /* Reduce margin */
+    }
+
+    h2 {
+        font-size: 25px; /* Reduce font size */
+    }
+
+    .box {
+        padding: 10px; /* Reduce padding */
+        margin: 5px; /* Reduce margin */
+    }
+
+    .box h4 {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    h5 {
+        font-size: 14px; /* Reduce font size */
     }
 }
