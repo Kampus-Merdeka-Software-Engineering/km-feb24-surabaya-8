@@ -155,8 +155,8 @@ footer {
 /* Responsiveness for body on mobile devices */
 @media (max-width: 768px) {
     main {
-        margin: 50px; /* Reduce margin */
-        padding: 20px; /* Reduce padding */
+        margin: 15px; /* Reduce margin */
+        padding: 15px; /* Reduce padding */
     }
 
     .bike {
@@ -213,14 +213,23 @@ footer {
     }
 
     .navbar a {
-        padding: 10px;
+        padding: 15px;
         width: 100%;
         text-align: center;
         box-sizing: border-box;
     }
 
     .cta button {
-        width: 100%;
+        width: 97%;
         margin-top: 10px;
+    }
+    
+    h1{
+        font-size: 38px;
+    }
+
+    .Logo{
+        height: 80px;
+        width: 80px;
     }
 }
