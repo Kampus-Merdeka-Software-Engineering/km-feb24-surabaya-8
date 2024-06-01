@@ -7,15 +7,16 @@
 
 /* Header */
 h1 {
-    padding: 10px;
-    text-align: start;
-    color: #ffff;
+    padding: 5px;
+    margin: 0 10px; /* Jarak antara logo dan h1 */
+    text-align: left;
+    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
 }
 
 a, button {
     font-weight: 500;
     font-size: 17px;
-    color: #ffff;
+    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
     text-decoration: none;
     padding: 10px;
 }
@@ -26,18 +27,24 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
-.logo {
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    height: 95px;
+    width: 95px;
     cursor: pointer;
-    size: small;
 }
 
 button {
     padding: 9px 25px;
     background: rgb(52, 130, 227);
-    border: 0px;
+    border: 0;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -45,6 +52,7 @@ button {
 button:hover {
     background: rgb(88, 162, 227);
 }
+
 
 /* Main Content */
 body {

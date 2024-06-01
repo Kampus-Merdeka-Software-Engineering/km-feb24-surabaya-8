@@ -1,182 +1,79 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Getting Started with Chart JS with www.chartjs3.com</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-      .chartMenu {
-        width: 100vw;
-        height: 40px;
-        background: #1A1A1A;
-        color: rgba(54, 162, 235, 1);
-      }
-      .chartMenu p {
-        padding: 10px;
-        font-size: 20px;
-      }
-      .chartCard {
-        width: 100vw;
-        height: calc(100vh - 40px);
-        background: rgba(54, 162, 235, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .chartBox {
-        width: 50%;
-        padding: 20px;
-        border-radius: 20px;
-        border: solid 3px rgba(54, 162, 235, 1);
-        background: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="chartMenu">
-      <p>Dashboarding</p>
-    </div>
-    <div class="chartCard">
-      <div class="chartBox">
-        <canvas id="myChart"></canvas>
-        <select onchange="filterChart(this)">
-            <option value="">pilih</option>
-            <option value="2011">2011</option>
-            <option value="2012">2012</option>
-            <option value="2013">2013</option>
-            <option value="2014">2014</option>
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-        </select>
-      </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
-    <script>
-    // setup 
-    const data = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016',],
-      datasets: [{
-        label: 'Yearly Product',
-        data: [2, 3, 5, 7, 5, 6],
-        backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-      }]
-    };
-
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        scales: {
-            x: {
-              type: 'time',
-              time: {
-                unit: 'year'
-              },
-              min: '2011',
-              max: new Date()
-            },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    };
-
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-
-    function filterChart(Yearly){
-        // console.log(Yearly.value)
-        myChart.config.options.scales.x.min = luxon.DateTIme.now().plus({ Yearly: -Yearly.value }).toISODate() ;
-        // myChart.config.options.scales.x.max = ;
-        myChart.update();
-    }
-    // Instantly assign Chart.js version
-    const chartVersion = document.getElementById('chartVersion');
-    chartVersion.innerText = Chart.version;
-    </script>
-
-  </body>
-</html> -->
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Charts with Filters</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    Form untuk filter negara
-    <div class="chart-1-filter-div">
-        <label for="countryDropdown">Pilih Negara: </label>
-        <select id="countryDropdown" name="countryFilter">
-            <option value="all">All</option>
-            <option value="Australia">Australia</option>
-            <option value="Canada">Canada</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="United States">United States</option>
-        </select>
-        <button id="filterButton">Filter</button>
-    </div>
+    <!--header-->
+    <header> 
+        <div class="logo-container">
+        <img class="Logo" src="img/logoputih.png" alt="logo">
+        <h1>Euro CycleHub</h1>
+        </div>
+        <nav class="navbar">
+           <a href="index.html" >Home</a>
+           <a href="overview.html" >Overview</a>
+           <a href="dashboard.html" >Dashboard</a>
+           <a href="team.html" >Team</a>
+           <a class="cta" href="form.html"><button>Contact Us</button></a>
+        </nav>
+    </header>
 
-    Canvas untuk grafik
-    <div>
-        <canvas id="mychart"></canvas>
-    </div>
-    <div>
-        <canvas id="mychart2"></canvas>
-    </div>
-    <div>
-        <canvas id="mychart3"></canvas>
-    </div>
-    <div>
-        <canvas id="mychart4"></canvas>
-    </div>
-    <div>
-        <canvas id="mychart6"></canvas>
-    </div>
-    
-    <script src="chart.js"></script>
+    <!--Main Content-->
+    <img class="bike" src="img/mountainbike.jpg">
+    <main class="gview">
+        <h2 class="heading">Euro CycleHub</h2><br>
+        <section class="desc">
+            <article>
+                <p>Euro CycleHub adalah produsen sepeda berkualitas tinggi yang menjadi pilihan utama bagi penggemar sepeda di Eropa dan seluruh dunia. Dengan dedikasi kami terhadap kualitas dan inovasi, kami menghasilkan sepeda yang tidak hanya handal dan efisien, tetapi juga nyaman dan stylish. Dibangun dengan material terbaik dan teknologi mutakhir, setiap sepeda dari Euro CycleHub adalah manifestasi dari kecintaan kami pada seni dan rekayasa sepeda yang luar biasa. Bergabunglah dengan Euro CycleHub dan temukan pengalaman bersepeda yang tak tertandingi!</p>
+            </article>   
+        </section>
+        <h2 class="heading">Gambaran Umum</h2>
+        <section class="gview-container">
+            <article class="box">
+                <h3>Pasar Dinamis</h3><br>
+                <p>Memahami dinamika pasar Eropa yang terus berkembang</p>
+            </article>   
+            <article class="box">
+                <h3> Fokus Geografis</h3><br>
+                <p>Mengutamakan Prancis, Jerman, dan Inggris sebagai pasar kunci</p>
+            </article>
+            <article class="box">
+                <h3>Segmentasi Demografis</h3><br>
+                <p>Melayani berbagai kelompok umur dan jenis kelamin dengan strategi pemasaran yang tepat</p>
+            </article>
+            <article class="box">
+                <h3>Variasi Produk</h3><br>
+                <p>Menawarkan berbagai produk, dari sepeda hingga aksesoris, sesuai kebutuhan pasar global</p>
+            </article>
+        </section>
+        
+        <section class="chartCard">
+            <h2 class="heading">Grafik Penjualan per Tahun</h2>
+            <div class="chartBoxHalf">
+                <canvas id="myChart4"></canvas>
+            </div>
+            <a href="dashboard.html"><button class="button1">More</button></a>
+        </section>  
+
+        <section class="bq-container">
+            <h2 class="heading">Bagaimana kita dapat mencapai peningkatan pendapatan penjualan sebesar 25% dalam satu tahun?</h2>
+            <a href="overview.html"><button class="button2">More</button></a>
+        </section>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Copyright &copy; 2024 Surabaya Team 8</p>
+    </footer>
+
+    <script src="js/chart2.js"></script>
 </body>
-</html> -->
+</html>

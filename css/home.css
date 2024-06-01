@@ -5,17 +5,18 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Styling header */
+/* Header */
 h1 {
-    padding: 10px;
-    text-align: start;
-    color: #fff;
+    padding: 5px;
+    margin: 0 10px; /* Jarak antara logo dan h1 */
+    text-align: left;
+    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
 }
 
 a, button {
     font-weight: 500;
     font-size: 17px;
-    color: #fff;
+    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
     text-decoration: none;
     padding: 10px;
 }
@@ -26,12 +27,18 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
-.logo {
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    height: 95px;
+    width: 95px;
     cursor: pointer;
-    size: small;
 }
 
 button {
@@ -66,15 +73,8 @@ body {
 
 main {
     margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.desc {
-    margin: 50px;
     padding: 10px;
-    font-size: 17px;
-    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
 }
 
 .gview-container {
@@ -95,28 +95,13 @@ main {
     gap: 15px;
 }
 
-
-.bq-container {
+.chartCard{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 25px;
     margin: 25px;
-}
-
-.button2 {
-    margin-top: 10px; /* Adjust as needed */
-}
-
-.gview .gview-container .box {
-    background-color: whitesmoke;
-    padding: 15px;
-    margin-top: 25px;
-    font-size: 17px;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-    border: 3px solid black;
 }
 
 .chartBoxHalf {
@@ -146,6 +131,31 @@ select {
     border: 1px solid #ccc;
 }
 
+.bq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    margin: 25px;
+}
+
+.button2 {
+    margin-top: 10px;
+}
+
+.gview .gview-container .box {
+    background-color: whitesmoke;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 17px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border: 3px solid black;
+}
+
+
+
 /* Footer */
 footer {
     background-color: #3559e0;
@@ -155,7 +165,7 @@ footer {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 500px) {
     .gview .gview-container {
         grid-template-columns: repeat(1, minmax(270px, 1fr));
     }
@@ -175,11 +185,9 @@ footer {
     }
 
     .chartBoxHalf {
-        height: 250px; /* Menyesuaikan ketinggian chart untuk layar yang lebih kecil */
+        height: 250px;
     }
-}
 
-@media (max-width: 500px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -208,19 +216,17 @@ footer {
         padding: 5px;
         font-size: 14px;
     }
+}
 
-    @media (max-width: 768px) {
-        .chartBox, .chartBoxHalf {
-            width: 100%;
-            margin: 10px;
-        }
-    
-        .chartMenu {
-            flex-direction: column;
-            height: auto;
-            font-size: 16px;
-        }
-    
-        
+@media (max-width: 768px) {
+    .chartBox, .chartBoxHalf {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .chartMenu {
+        flex-direction: column;
+        height: auto;
+        font-size: 16px;
     }
 }

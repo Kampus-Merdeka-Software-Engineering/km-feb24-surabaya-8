@@ -12,16 +12,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!--header-->
     <header> 
+        <div class="logo-container">
+        <img class="Logo" src="img/logoputih.png" alt="logo">
         <h1>Euro CycleHub</h1>
+        </div>
         <nav class="navbar">
-           <a href="home.html">Home</a>
-           <a href="overview.html">Overview</a>
-           <a href="dashboard.html">Dashboard</a>
-           <a href="team.html">Team</a>
+           <a href="index.html" >Home</a>
+           <a href="overview.html" >Overview</a>
+           <a href="dashboard.html" >Dashboard</a>
+           <a href="team.html" >Team</a>
            <a class="cta" href="form.html"><button>Contact Us</button></a>
         </nav>
     </header>
+
+    <!-- Main Content -->
     <div class="chartMenu">
         <p>Dashboard</p>
         <select id="yearSelect" onchange="filterChart(this.value)">
