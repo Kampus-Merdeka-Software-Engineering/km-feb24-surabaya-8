@@ -104,9 +104,9 @@ main {
 }
 
 .chartBoxHalf {
-    flex: 85%;
+    flex: 95%;
     padding: 20px;
-    margin: 50px;
+    margin: 40px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -114,12 +114,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 380px;
+    height: 500px;
 }
 
 .chartBoxHalf canvas {
-    width: 100% !important;
-    height: 100% !important;
+    width: 95% !important;
+    height: 95% !important;
 }
 
 
@@ -132,8 +132,12 @@ main {
     margin: 25px;
 }
 
-.button1 .button2 {
+.button1 {
     margin: 10px;
+}
+
+.button2{
+    margin: 15px;
 }
 
 .gview .gview-container .box {
@@ -166,12 +170,12 @@ footer {
 
     .navbar {
         flex-direction: column;
-        width: 100%;
+        width: 97%;
     }
 
     .navbar a {
-        padding: 15px;
-        width: 100%;
+        padding: 9px;
+        width: 98%;
         text-align: center;
         box-sizing: border-box;
     }
@@ -181,16 +185,19 @@ footer {
         margin-top: 10px;
     }
 
-    .logo-container {
-        width: 100%; /* Pastikan logo-container juga 100% */
-        justify-content: space-between; /* Jarak antara logo dan teks header */
-    }
 
     h1 {
-        margin: 0; /* Hilangkan margin agar header rapat */
-        padding: 5px 0; /* Atur padding sesuai kebutuhan */
+        font-size: 33px;
+       
     }
-        .desc {
+
+    .Logo{
+
+        height: 80px;
+        width: 80px;
+    }
+
+    .desc {
         margin: 10px;
         padding: 5px;
         font-size: 14px;
@@ -207,7 +214,6 @@ footer {
     }
 } 
 
-
 @media (max-width: 768px) {
     .gview .gview-container {
         grid-template-columns: repeat(1, minmax(270px, 1fr));
@@ -220,7 +226,7 @@ footer {
     } */
 
     .heading {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .gview-container .heading {

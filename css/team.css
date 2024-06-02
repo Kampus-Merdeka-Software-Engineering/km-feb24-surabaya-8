@@ -188,11 +188,11 @@ footer {
 
     .navbar {
         flex-direction: column;
-        width: 100%;
+        width: 97%;
     }
 
     .navbar a {
-        padding: 15px;
+        padding: 9px;
         width: 100%;
         text-align: center;
         box-sizing: border-box;
@@ -204,7 +204,7 @@ footer {
     }
 
     h1{
-        font-size: 38px;
+        font-size: 33px;
     }
 
     .Logo{
