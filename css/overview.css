@@ -1,33 +1,18 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Space Grotesk', sans-serif; /* Corrected font name */
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Header */
-h1 {
-    padding: 5px;
-    margin: 0 10px; /* Jarak antara logo dan h1 */
-    text-align: left;
-    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
-}
-
-a, button {
-    font-weight: 500;
-    font-size: 17px;
-    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
-    text-decoration: none;
-    padding: 10px;
-}
-
 header {
     background: #3559e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 header .logo-container {
@@ -41,18 +26,35 @@ header .logo-container {
     cursor: pointer;
 }
 
+h1 {
+    padding: 5px;
+    margin: 0 10px;
+    text-align: left;
+    color: #fff;
+}
+
+a, button {
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
 button {
     padding: 9px 25px;
     background: rgb(52, 130, 227);
     border: 0;
     border-radius: 50px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
     background: rgb(88, 162, 227);
 }
-/* Styling Main Content */
+
+/* Main Content */
 body {
     margin: 0;
     padding: 0;
@@ -63,8 +65,8 @@ body {
     width: 100%;
     height: 500px;
     margin: 0;
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-} 
+    object-fit: cover;
+}
 
 main {
     margin: 100px;
@@ -84,7 +86,7 @@ main {
     font-size: 17px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    border: 3px solid black; /* Unified border properties */
+    border: 3px solid black;
 }
 
 .heading {
@@ -109,10 +111,6 @@ h2 {
 }
 
 h3 {
-    text-align: center;
-}
-
-.headingpage {
     text-align: center;
 }
 
@@ -143,6 +141,25 @@ h3 {
     padding-bottom: 100px;
 }
 
+/* Style for the Back to Top button */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+.backToTopBtn {
+    font-size: 18px;
+    background-color: #3559e0;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px; 
+}
+
+.backToTopBtn:hover {
+    background-color: #88a2e7;
+}
 
 /* Footer */
 footer {
@@ -155,50 +172,45 @@ footer {
 /* Responsiveness for body on mobile devices */
 @media (max-width: 768px) {
     main {
-        margin: 15px; /* Reduce margin */
-        padding: 15px; /* Reduce padding */
+        margin: 15px;
+        padding: 15px;
     }
 
     .bike {
-        height: auto; /* Allow image to resize based on width */
-        max-width: 100%; /* Ensure image does not overflow */
+        height: auto;
+        max-width: 100%;
     }
 
     .headingpage {
-        padding: 20px; /* Reduce padding */
-        font-size: 30px; /* Reduce font size */
+        padding: 20px;
+        font-size: 30px;
     }
 
     .box {
-        padding: 10px; /* Reduce padding */
-        margin-top: 15px; /* Reduce margin */
-        font-size: 15px; /* Reduce font size */
+        padding: 10px;
+        margin-top: 15px;
+        font-size: 15px;
     }
 
     aside {
-        float: none; /* Remove float */
-        margin: 10px auto; /* Center align */
+        float: none;
+        margin: 10px auto;
     }
 
     img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Ensure aspect ratio is maintained */
+        width: 100%;
+        height: auto;
     }
 
     h2 {
-        font-size: 20px; /* Reduce font size */
-        padding: 10px 0; /* Reduce padding */
-    }
-
-    .headingpage {
-        font-size: 25px; /* Reduce font size */
+        font-size: 20px;
+        padding: 10px 0;
     }
 
     .bq-container, .sp-container, .a-container {
-        grid-template-columns: repeat(1, minmax(270px, 1fr)); /* Change to single column layout */
+        grid-template-columns: repeat(1, minmax(270px, 1fr));
     }
 }
-
 
 @media (max-width: 480px) {
     header {
@@ -224,11 +236,11 @@ footer {
         margin-top: 10px;
     }
     
-    h1{
-        font-size: 38px;
+    h1 {
+        font-size: 33px;
     }
 
-    .Logo{
+    .Logo {
         height: 80px;
         width: 80px;
     }
