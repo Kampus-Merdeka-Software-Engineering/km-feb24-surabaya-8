@@ -8,15 +8,15 @@
 /* Header */
 h1 {
     padding: 5px;
-    margin: 0 10px; /* Jarak antara logo dan h1 */
+    margin: 0 10px; 
     text-align: left;
-    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
+    color: #fff; 
 }
 
-a, button {
+a, .button {
     font-weight: 500;
     font-size: 17px;
-    color: #fff; /* Mengubah #ffff menjadi #fff untuk warna putih yang benar */
+    color: #fff; 
     text-decoration: none;
     padding: 10px;
 }
@@ -41,8 +41,43 @@ header .logo-container {
     cursor: pointer;
 }
 
-button {
-    padding: 9px 25px;
+h1 {
+    padding: 5px;
+    margin: 0 10px;
+    text-align: left;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.navbar {
+    display: flex; 
+}
+
+.navbar li {
+    margin:  10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+button, .button {
+    font-family: 'Space Grotesk', sans-serif; /* Pastikan font-family sama */
+    font-weight: 500;  /* Atur font-weight sesuai kebutuhan */
+    font-size: 17px;   /* Atur font-size sesuai kebutuhan */
+    color: #fff;       /* Atur warna teks sesuai kebutuhan */
+    text-decoration: none;
+    padding: 9px 19px;
     background: rgb(52, 130, 227);
     border: 0;
     border-radius: 50px;
@@ -126,6 +161,88 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin: 15px;
+        color: #fff;
+        font-size: 28px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #21232d;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar {
+        display: none; /* Ensure it's hidden on small screens */
+        flex-direction: column;
+        align-items: center;
+        background: #21232d;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar ul {
+        margin: 50px;
+        padding: 20px;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+    }
+
+    .navbar li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .cta button {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .Logo {
+        margin-top: 10px;
+        padding: 3px;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
     .chartBox, .chartBoxHalf {
         width: 100%;
         margin: 10px;
@@ -143,44 +260,18 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
     }
 
     .navbar {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar a {
-        padding: 9px;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .cta button {
-        width: 97%;
-        margin-top: 10px;
-    }
-
-    h1{
-        font-size: 33px;
-    }
-
-    .Logo{
-        height: 80px;
-        width: 80px;
-    }
-
-    .chartMenu p {
-        font-size: 15px;
-    }
-
-    footer {
-        font-size: 14px;
+        display: flex; /* Ensure it's visible on larger screens */
+        flex-direction: row;
+        align-items: center;
+        background: none; /* No background for larger screens */
+        position: static; /* Static positioning for larger screens */
+        width: auto;
     }
 }
+

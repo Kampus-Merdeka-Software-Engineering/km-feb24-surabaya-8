@@ -51,13 +51,12 @@ body {
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
     background: radial-gradient(#ffff, #b3e01f);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 50px;
 }
 
 form {
@@ -97,7 +96,7 @@ form input[type="submit"] {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -125,7 +124,7 @@ form input[type="submit"]:hover {
 
 /* Button "Back to Home" */
 button {
-    margin-top: 20px;
+    margin: 20px;
     background: rgb(52, 130, 227);
     border: none;
     border-radius: 5px;

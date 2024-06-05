@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,19 @@
         <img class="Logo" src="assets/logoputih.png" alt="logo">
         <h1>Euro CycleHub</h1>
         </div>
+
+        <button class="nav-toggle" aria-label="open navigation">
+            &#9776;
+        </button>
+
         <nav class="navbar">
-           <a href="index.html" >Home</a>
-           <a href="overview.html" >Overview</a>
-           <a href="dashboard.html" >Dashboard</a>
-           <a href="team.html" >Team</a>
-           <a class="cta" href="form.html"><button>Contact Us</button></a>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="overview.html" >Overview</a></li>
+                <li><a href="dashboard.html" >Dashboard</a></li>
+                <li><a href="team.html" >Team</a></li>
+                <li><a class="cta" href="form.html"><button>Contact Us</button></a></li>
+            </ul>
         </nav>
     </header>
 
@@ -71,6 +78,7 @@
         </div>
     </div>
     <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
 </body>
 <!--footer-->
 <footer>

@@ -78,7 +78,7 @@ button, .button {
     color: #fff;       /* Atur warna teks sesuai kebutuhan */
     text-decoration: none;
     padding: 9px 19px;
-    background: #3559e0;
+    background: rgb(52, 130, 227);
     border: 0;
     border-radius: 50px;
     cursor: pointer;
@@ -202,31 +202,41 @@ footer {
     }
 
     .nav-toggle {
-        display: row;
+        display: block;
         margin: 15px;
         color: #fff;
         font-size: 28px;
         border-radius: 10px;
+        cursor: pointer;
     }
 
-    .navbar {
-        position: absolute;
-        top: 120px;
-        right: -100%;
-        width: 100%;
-        height: auto;
-        background: #21232d;
-        transition: right 0.5s ease;
+    .navbar.active {
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 20px;
+        justify-content: start;
+        background: #21232d;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar {
+        display: none; /* Ensure it's hidden on small screens */
+        flex-direction: column;
+        align-items: center;
+        background: #21232d;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        z-index: 10;
     }
 
     .navbar.active {
         right: 0;
     }
-    
+
     .navbar ul {
         margin: 50px;
         padding: 20px;
@@ -299,5 +309,14 @@ footer {
 @media (min-width: 769px) {
     .nav-toggle {
         display: none;
+    }
+
+    .navbar {
+        display: flex; /* Ensure it's visible on larger screens */
+        flex-direction: row;
+        align-items: center;
+        background: none; /* No background for larger screens */
+        position: static; /* Static positioning for larger screens */
+        width: auto;
     }
 }
