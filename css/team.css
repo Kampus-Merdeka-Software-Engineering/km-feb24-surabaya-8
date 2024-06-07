@@ -323,3 +323,18 @@ footer {
         font-size: 14px; /* Reduce font size */
     }
 }
+
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .navbar {
+        display: flex; /* Ensure it's visible on larger screens */
+        flex-direction: row;
+        align-items: center;
+        background: none; /* No background for larger screens */
+        position: static; /* Static positioning for larger screens */
+        width: auto;
+    }
+}

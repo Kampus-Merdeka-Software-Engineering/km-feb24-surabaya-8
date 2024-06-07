@@ -226,7 +226,6 @@ footer {
         display: none; /* Ensure it's hidden on small screens */
         flex-direction: column;
         align-items: center;
-        /* background: #21232d; */
         position: absolute;
         top: 0px;
         width: 100%;
