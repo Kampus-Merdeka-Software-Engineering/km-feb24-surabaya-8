@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us Form</title>
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--Main Content-->
     <form id="contactForm">
-        <h2>Contact Us</h2>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br> <!-- required attribute untuk memaksa bidang diisi -->
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br> <!-- type="email" untuk memeriksa format email -->
-        <label for="message">Message:</label><br>
-        <textarea name="message" id="message" rows="10" cols="30" required></textarea><br> <!-- required attribute -->
-        <br>
-        <input type="submit" value="Submit">
+      <h2>Contact Us</h2>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+      <!-- required attribute untuk memaksa bidang diisi -->
+      <label for="email">E-mail:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+      <!-- type="email" untuk memeriksa format email -->
+      <label for="message">Message:</label><br />
+      <textarea
+        name="message"
+        id="message"
+        rows="10"
+        cols="30"
+        required
+      ></textarea
+      ><br />
+      <!-- required attribute -->
+      <br />
+      <input type="submit" value="Submit" />
     </form>
     <div id="notification"></div>
-    <button onclick="goToHomePage()">Back to Home</button>
-
-    <script>
-        const contactForm = document.getElementById('contactForm');
-        const notification = document.getElementById('notification');
-
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Check if the form is valid
-            if (contactForm.checkValidity()) {
-                // Form is valid, proceed with submission
-                // Simulate form submission (replace with actual submission logic)
-                // In a real application, you'd send the form data to a server using AJAX or fetch
-                // For demonstration purposes, I'll just display a success message
-                displayNotification('Form submitted successfully!', 'success');
-            } else {
-                // Form is invalid, display error message
-                displayNotification('Please fill in all required fields!', 'error');
-            }
-        });
-
-        function displayNotification(message, type) {
-            notification.innerHTML = `<div class="alert ${type}">${message}</div>`;
-        }
-
-        function goToHomePage() {
-            // Redirect to home page, replace 'home.html' with your actual home page URL
-            window.location.href = 'index.html';
-        }
-    </script>
-</body>
+    <a href="index.html">
+      <button>&#127968; Back to Home</button>
+    </a>
+    <script src="js/script.js"></script>
+  </body>
 </html>

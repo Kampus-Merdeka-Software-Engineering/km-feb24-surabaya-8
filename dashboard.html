@@ -1,87 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!--header-->
-    <header> 
-        <div class="logo-container">
-        <img class="Logo" src="assets/logoputih.png" alt="logo">
+    <header>
+      <div class="logo-container">
+        <img class="Logo" src="assets/logoputih.png" alt="logo" />
         <h1>Euro CycleHub</h1>
-        </div>
+      </div>
 
-        <button class="nav-toggle" aria-label="open navigation">
-            &#9776;
-        </button>
+      <button class="nav-toggle" aria-label="open navigation">&#9776;</button>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="overview.html" >Overview</a></li>
-                <li><a href="dashboard.html" >Dashboard</a></li>
-                <li><a href="team.html" >Team</a></li>
-                <li><a class="cta" href="form.html"><button>Contact Us</button></a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="overview.html">Overview</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li>
+            <a class="cta" href="form.html">
+              <button>&#128231; Contact Us</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <div class="chartMenu">
-        <p>Filter</p>
-        <select id="yearSelect" onchange="filterChart(this.value)">
-            <option value="">Select Year</option>
-            <option value="2011">2011</option>
-            <option value="2012">2012</option>
-            <option value="2013">2013</option>
-            <option value="2014">2014</option>
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-        </select>
-        <!-- Dropdown baru untuk pemilihan negara -->
-        <!-- <select id="countrySelect" onchange="filterChartByCountry(this.value)">
-            <option value="">Select Country</option>
-            <option value="Australia">Australia</option>
-            <option value="Canada">Canada</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="United States">United States</option> -->
-            <!-- Lanjutkan dengan negara lain yang relevan -->
-        </select>
+      <p>Filter</p>
+      <select id="yearSelect" onchange="filterChart(this.value)">
+        <option value="">Select Year</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+      </select>
     </div>
     <div class="chartCard">
-        <div class="chartBox">
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="chartBox">
-            <canvas id="myChart2"></canvas>
-        </div>
-        <div class="chartBox">
-            <canvas id="myChart3"></canvas>
-        </div>
-        <div class="chartBoxHalf">
-            <canvas id="myChart4"></canvas>
-        </div>
-        <div class="chartBoxHalf">
-            <canvas id="myChart5"></canvas>
-        </div>
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="myChart2"></canvas>
+      </div>
+      <div class="chartBox">
+        <canvas id="myChart3"></canvas>
+      </div>
+      <div class="chartBoxHalf">
+        <canvas id="myChart4"></canvas>
+      </div>
+      <div class="chartBoxHalf">
+        <canvas id="myChart5"></canvas>
+      </div>
     </div>
     <script src="js/chart.js"></script>
     <script src="js/script.js"></script>
-</body>
-<!--footer-->
-<footer>
+  </body>
+  
+  <!--footer-->
+  <footer>
     <p>Copyright &copy; 2024 Surabaya Team 8</p>
   </footer>
 </html>
